@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   tools4.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: trabut <trabut@student.42.fr>              +#+  +:+       +#+        */
+/*   By: lbonnete <lbonnete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/20 17:04:28 by lewis             #+#    #+#             */
-/*   Updated: 2020/07/23 14:56:28 by trabut           ###   ########.fr       */
+/*   Updated: 2020/07/29 14:47:53 by lbonnete         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ void			free_info(t_var *info)
 		SDL_DestroyWindow(info->window);
 	if (info->map)
 		free_map(info->map);
-	TTF_CloseFont(info->font);
+	if (info->font)
+		TTF_CloseFont(info->font);
 }
 
 void			ft_exit(t_var *info, t_render *render)

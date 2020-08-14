@@ -97,9 +97,9 @@ int			create_sector(t_var *info, t_map *map)
 	if (sector)
 	{
 		sector = get_to_last_sector(map->sectors);
-		if (sector->sector_id >= 10)
+		if (sector->sector_id >= 20)
 		{
-			ft_putendl("map cannot have more than 10 sectors");
+			ft_putendl("map cannot have more than 20 sectors");
 			return (0);
 		}
 		if (!(sector->next_sector = (t_sector*)malloc(sizeof(t_sector)))

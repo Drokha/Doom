@@ -6,7 +6,7 @@
 /*   By: trabut <trabut@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 15:51:41 by lbonnete          #+#    #+#             */
-/*   Updated: 2020/07/23 15:58:21 by trabut           ###   ########.fr       */
+/*   Updated: 2020/07/29 15:49:27 by atyczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,9 +109,11 @@ char			*recup_map(char *src)
 
 	map = 0;
 	i = 0;
-	ft_putendl("Loading map...");
 	if ((fd = open("core", O_RDONLY)) == -1)
-		return (0);
+	{
+		ft_putendl("Core not found... Are you joking ?");
+		return (NULL);
+	}
 	while (i++ < 12)
 	{
 		get_next_line(fd, &line);

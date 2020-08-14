@@ -6,7 +6,7 @@
 /*   By: lbonnete <lbonnete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/20 17:04:28 by lewis             #+#    #+#             */
-/*   Updated: 2020/07/27 15:44:16 by lbonnete         ###   ########.fr       */
+/*   Updated: 2020/07/29 14:58:12 by atyczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,9 @@ int		init_main(int ac, char **av, t_var *info, t_player *player)
 {
 	if (PARSE)
 		png_parse();
+	ft_init_pour_linstant(info);
 	if (!main_check(ac, av, info))
 		return (0);
-	ft_init_pour_linstant(info);
 	init_player(player, info->map);
 	info->player = player;
 	return (1);

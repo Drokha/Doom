@@ -6,7 +6,7 @@
 /*   By: lbonnete <lbonnete@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/18 14:47:46 by lbonnete          #+#    #+#             */
-/*   Updated: 2020/07/28 13:36:37 by lbonnete         ###   ########.fr       */
+/*   Updated: 2020/07/29 15:53:36 by atyczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ int						main_check(int ac, char **av, t_var *info)
 	str = ft_strdup(av[1]);
 	if (info_map(str, info->map) == 0)
 	{
-		ft_exit(info, info->render);
+		free(str);
 		return (0);
 	}
 	if (!(init_win1(info)) || !(init_win2(info)) || !(init_win3(info)))
 	{
-		ft_exit(info, info->render);
+		free(str);
 		return (0);
 	}
 	return (1);

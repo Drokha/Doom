@@ -6,7 +6,7 @@
 /*   By: trabut <trabut@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 15:51:41 by lbonnete          #+#    #+#             */
-/*   Updated: 2020/07/23 16:02:34 by trabut           ###   ########.fr       */
+/*   Updated: 2020/07/29 15:48:34 by atyczyns         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,8 @@ int				info_map(char *str, t_map *map)
 	while (str[i])
 		++i;
 	map->i = 0;
-	if (!(the_map = recup_map(str)))
+	ft_putendl("Loading map...");
+	if ((the_map = recup_map(str)) == NULL)
 		return (0);
 	if (check_map(the_map) == 0)
 		return (load_exit(the_map));

@@ -207,7 +207,7 @@ struct					s_render
 	t_wall				wall_item;
 	t_item				*item;
 	t_item				*item_0;
-	int					tab[10];
+	int					tab[20];
 	int					nbr_items;
 	int					nb_item_to_draw;
 	double				tx;

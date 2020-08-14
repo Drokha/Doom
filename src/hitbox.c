@@ -26,7 +26,7 @@ int				ray_hit(t_render *render, t_point p)
 			r.y = render->ray->y2;
 			if (render->wall->is_portal == 1)
 				return (1);
-			if (calc_dist(r, p) <= 0.5)
+			if (calc_dist(r, p) <= 0.25)
 				return (0);
 		}
 	}
@@ -44,7 +44,7 @@ int				hit_item(t_var *info, t_render *render, t_point p)
 		{
 			r.x = render->ray->x2;
 			r.y = render->ray->y2;
-			if (calc_dist(r, p) <= 0.5)
+			if (calc_dist(r, p) <= 0.25)
 				return (hit_objet(info, render));
 		}
 		render->item = render->item->next_item;
